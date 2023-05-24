@@ -1,0 +1,42 @@
+{
+  "id": "katalog-restoran-lite-pwa-1",
+  "start_url": "./index.html",
+  "name": "Katalog Restoran Lite",
+  "short_name": "Restoran Lite",
+  "description": "Katalog Restoran Gratis untuk kamu",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D84315",
+  "icons": [
+    {
+      "src": "/icons/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/android-icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/android-icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/apple-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
