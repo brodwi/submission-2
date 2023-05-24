@@ -5,8 +5,8 @@ import Detail from '../views/pages/detail';
 
 const routes = {
   '/': Home, // default page
-  '/list': Home,
-  '/review': Favorite,
+  '/home': Home,
+  '/favorite': Favorite,
   '/detail/:id': Detail,
   // '/like': Like,
 };
