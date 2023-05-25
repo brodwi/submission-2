@@ -1,6 +1,6 @@
 import FavoriteRestoranIdb from '../../data/favorite-restoran-idb';
 import { createRestoranItemTemplate } from '../templates/template-creator';
-
+import FavoriteRestaurantIdb from '../../data/favorite-restoran-idb';
 const Favorite = {
   async render() {
     return `
@@ -12,11 +12,17 @@ const Favorite = {
       </div>
     `;
   },
+  /*async afterRender() {
+    const restaurant = await FavoriteRestaurantIdb.getAllRestorans();
+    const restaurantContainer = document.querySelector('#restaurans');
+    restaurant.forEach((restaurants) => {
+      restaurantContainer.innerHTML += createRestoranItemTemplate(restaurants);
+    });
+  },*/
 
   async afterRender() {
     const restorans = await FavoriteRestoranIdb.getAllRestorans();
     const restoransContainer = document.querySelector('#restorans');
-
     restorans.forEach((restoran) => {
       restoransContainer.innerHTML += createRestoranItemTemplate(restoran);
     });

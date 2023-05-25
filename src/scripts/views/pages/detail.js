@@ -14,6 +14,7 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restoran = await RestoranSource.detailRestoran(url.id);
+    console.log(restoran);
     const restoranContainer = document.querySelector('#restoran');
     restoranContainer.innerHTML = createRestoranDetailTemplate(restoran);
 

@@ -5,19 +5,30 @@ const createRestoranDetailTemplate = (restoran) => `
     <img class="restoran__poster" src="${CONFIG.BASE_IMAGE_URL + restoran.pictureId}" alt="${restoran.name}" />
     <div class="restoran__info">
         <h3>Informasi</h3>
-        <h4>Tagline</h4>
-        <p>${restoran.name}</p>
-        <h4>Release Date</h4>
-        <p>${restoran.release_date}</p>
-        <h4>Duration</h4>
-        <p>${restoran.runtime} minutes</p>
-        <h4>Rating</h4>
-        <p>${restoran.address}</p>
-    </div>
-    <div class="restoran__overview">
-        <h3>Overview</h3>
+        <h4>Deskripsi</h4>
         <p>${restoran.description}</p>
+        <h4>Alamat</h4>
+        <p>${restoran.address}</p>
+        <h4>Kota</h4>
+        <p>${restoran.city}</p>
+        <h4>Menu Makanan</h4>
+        <ul>
+        ${restoran.menus.foods.map((foods) => `<li>${foods.name}</li>`).join('')}
+        </ul>
+        <h4>Menu Minuman</h4>
+        <ul>
+          ${restoran.menus.drinks.map((drinks) => `<li>${drinks.name}</li>`).join('')}
+        </ul>
     </div>
+    <h4>Customer Reviews</h4>
+    ${restoran.customerReviews.map((review) => `
+      <div class="Restoran__overview">
+        <p class="review__name">${review.name}</p>
+        <p class="review__date">${review.date}</p>
+        <p class="review__text">${review.review}</p>
+      </div>
+    `).join('')}
+  </div>
 `;
 
 const createRestoranItemTemplate = (restoran) => `
