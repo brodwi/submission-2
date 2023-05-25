@@ -12,10 +12,10 @@ class RestoranSource {
     const responseJson = await response.json();
     return responseJson.results;
   }
-
   static async detailRestoran(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
-    return response.json();
+    const responseJson = await response.json();
+    return responseJson.restaurant;
   }
 }
 
